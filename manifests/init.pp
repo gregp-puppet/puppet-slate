@@ -1,6 +1,13 @@
+# Public: Installs Slate
+#
+# Usage:
+#
+#   include slate
+
 class slate {
-  package { 'slate':
-    provider   => 'appdmg',
-    source => 'http://slate.ninjamonkeysoftware.com/Slate.dmg'
+  package { 'Slate':
+    ensure   => 'installed',
+    source   => 'http://slate.ninjamonkeysoftware.com/Slate.dmg',
+    provider => 'appdmg'
   }
 }
